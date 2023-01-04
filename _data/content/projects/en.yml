@@ -4,29 +4,29 @@
 ###########################################################
 page_data:
   main:
-    header: "Projects"
-    info: "Your Project page description."
+    header: "Projets"
+    info: "Mes projets d'analyses de données"
     text_color: "white"
     # if you don't want to use background image, comment it. back_color will be activated.
     img: ":projects-heading.jpg"
     back_color: "lightblue"
 
   category:
-    - title: "Example"
-      type: id_example
+    - title: "Projets"
+      type: id_projet
       color: "gray"
-    - title: "Picture"
-      type: id_picture
+    - title: "Dashboards"
+      type: id_dashboard
       color: "#62b462"
     - title: "Quote"
-      type: id_quote
+      type: id_image
       color: "#2FD0ED"
 
   list:
     # example
-    - type: id_example
-      project_name: "Example Project"
-      project_excerpt: "Examples"
+    - type: id_projet
+      project_name: "Prétraitement et manipulation des données"
+      project_excerpt: "Prétraitement des données avec Python"
       img: ":project1_thumb.jpg"
       img_title: "img title1"
       date: "2021-03-13"
@@ -172,9 +172,9 @@ page_data:
         ```
 
     # picture
-    - type: id_picture
-      project_name: "Example Project"
-      project_excerpt: "Picture"
+    - type: id_projet
+      project_name: "Visualization des données"
+      project_excerpt: "Visualization des données avec python"
       img: ":project2_thumb.jpg"
       img_title: "img title2"
       date: "2021-04-23"
@@ -185,9 +185,9 @@ page_data:
         ![Image](:project2_thumb.jpg)
 
     # quote
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "William Shakespeare"
+    - type: id_projet
+      project_name: "Projet statistiques"
+      project_excerpt: "Statistiques avec python"
       #img: ":project1_thumb.jpg"
       #img_title: "img title3"
       date: "2021-05-27"
@@ -206,27 +206,28 @@ page_data:
         But bears it out even to the edge of doom.
         If this be error and upon me proved,
         I never writ, nor no man ever loved.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Albert Einstein"
+    - type: id_projet
+      project_name: "Réduction de dimensionnalité"
+      project_excerpt: "Apprentissage non supervisé avec R"
       img: ":project2_thumb.jpg"
       img_title: "img title4"
       date: "2021-06-08"
       post: |
         Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Mae West"
+    - type: id_projet
+      project_name: "Machine learning"
+      project_excerpt: "Apprentissage supervisé avec python"
       img: ":project1_thumb.jpg"
       img_title: "img title5"
       date: "2021-08-20"
       post: |
         You only live once, but if you do it right, once is enough.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Mahatma Gandhi "
+    - type: id_dashboard
+      project_name: "Tableau de board ressources humaines"
+      project_excerpt: "PowerBI Dashboard"
       img: ":project2_thumb.jpg"
       img_title: "img title6"
       date: "2021-12-20"
       post: |
         Be the change that you wish to see in the world.
+

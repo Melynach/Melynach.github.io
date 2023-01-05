@@ -18,9 +18,7 @@ page_data:
     - title: "Dashboards"
       type: id_dashboard
       color: "#62b462"
-    - title: "Quote"
-      type: id_image
-      color: "#2FD0ED"
+ 
 
   list:
     # example

@@ -29,24 +29,50 @@ page_data:
       img_title: "img title1"
       date: "2021-03-13"
       post: |
-        # Examples
+        # Introduction
+       {:data-align="center"}
+        Data manipulation and preprocessing is a crucial step in any data analysis,
+        especially when working with a real-life dataset that usually has inconsistent formatting, human errors and can also be incomplete.
+        In fact, this step often represents almost half of the analyst's work. 
+        In this article we are going to tackle the analysis of the PhD theses defended in France.
 
-        This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
+        First, we will start out the process by data cleaning and preprocessing to make our dataset more efficient, then,
+        spotting outliers and finally analyzing trends over time and drawing insights about PhD theses in France.
+        The data used in this analysis is a real-life dataset, from the French website theses.fr launched in 2011.
+        It consists of 447643 rows and 18 columns and it contains information about thesis defended or in progress of defending in France,
+        such as name and the id of the author, the name of the field, the date of defense, the date of first registration in doctorate,
+        the name and the id of the mentor etc.
+        ***
+       
 
-        ### Headings (centered)
-        {:data-align="center"}
+       # Dealing with missing data
+       #### Table 01 : The percentage and count of missing data per variable for PhD dataset
 
-        # Heading 1
-
-        ## Heading 2
-
-        ### Heading 3
-
-        #### Heading 4
-
-        ##### Heading 5
-
-        ###### Heading 6
+        | Columns                                  | Missing values       | %                 |
+        | -------------------:                     | ------------------:  | ----------------: |
+        | Date de premiere  inscription en doctorat|  383668              | 85.71             |
+        | Identifiant auteur                       |  12998               | 29.04             |                                  
+        | Langue de la these                       |  63765               | 14.04             |
+        | Date de soutenance                       |  56746               | 12.68             |
+        | Identifiant établissement                |  17085               | 03.82             |
+        |MAJ dans theses.fr                        |  177                 | 00.04             |
+        |Publication dans theses.fr                |  0.0                 | 0.0               |
+        |Accessible en ligne                       |  0.0                 | 0.0               |
+        |Identifiant de la these                   |  0.0                 | 0.0               |
+        |Year                                      |  0.0                 | 0.0               |
+        |Auteur                                    |  0.0                 | 0.0               |
+        |Discipline                                |  0.0                 | 0.0               |
+        |Etablissement  soutenance                 |  0.0                 | 0.0               | 
+        |Identifiant directeur                     |  0.0                 | 0.0               |
+        |Directeur de these (nom prenom)           |  0.0                 | 0.0               |
+        |Directeur de these                        |  0.0                 | 0.0               |
+        |Titre                                     |  0.0                 | 0.0               |
+        |Statut                                    |  0.0                 | 0.0               |
+         {:data-align="center"}
+         
+         We started our process by inspecting the missing values in our dataset.
+         First, we made Table 01 that contains every variable in the dataset with its missing values percentage,
+         and then we made a sorted matrix and heatmap to visualize the missing data in our variables. 
 
         ***
 

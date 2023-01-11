@@ -21,181 +21,27 @@ page_data:
  
 
   list:
-    # example
+  
     - type: id_projet
-      project_name: "Prétraitement et manipulation des données"
-      project_excerpt: "Prétraitement des données avec Python"
+      project_name: "Data wrangling"
+      project_excerpt: "Data wrangling with Python"
       img: ":project1_thumb.jpg"
       img_title: "img title1"
       date: "2021-03-13"
       post: |
         # Introduction
        {:data-align="center"}
-        Data manipulation and preprocessing is a crucial step in any data analysis,
+        Data wrangling is a crucial step in any data analysis,
         especially when working with a real-life dataset that usually has inconsistent formatting, human errors and can also be incomplete.
         In fact, this step often represents almost half of the analyst's work. 
-        In this article we are going to tackle the analysis of the PhD theses defended in France.
-
-        First, we will start out the process by data cleaning and preprocessing to make our dataset more efficient, then,
-        spotting outliers and finally analyzing trends over time and drawing insights about PhD theses in France.
-        The data used in this analysis is a real-life dataset, from the French website theses.fr launched in 2011.
-        It consists of 447643 rows and 18 columns and it contains information about thesis defended or in progress of defending in France,
-        such as name and the id of the author, the name of the field, the date of defense, the date of first registration in doctorate,
-        the name and the id of the mentor etc.
+        This project aims to analyze Ph.D. theses defended in France between 1971 and 2020 sourced from the French website theses.fr in order to uncover valuable insights.
+        To achieve this, we will thoroughly examine all variables and identify any missing or abnormal data.
+        Additionally, we will delve deeper to study trends in numerical variables over time,
+        such as changes in the number of theses defended in the past half-century and and extract meaningful insights.
         ***
        
 
-       # Dealing with missing data
-       #### Table 01 : The percentage and count of missing data per variable for PhD dataset
-
-        | Columns                                  | Missing values       | %                 |
-        | -------------------:                     | ------------------:  | ----------------: |
-        | Date de premiere  inscription en doctorat|  383668              | 85.71             |
-        | Identifiant auteur                       |  12998               | 29.04             |                                  
-        | Langue de la these                       |  63765               | 14.04             |
-        | Date de soutenance                       |  56746               | 12.68             |
-        | Identifiant établissement                |  17085               | 03.82             |
-        |MAJ dans theses.fr                        |  177                 | 00.04             |
-        |Publication dans theses.fr                |  0.0                 | 0.0               |
-        |Accessible en ligne                       |  0.0                 | 0.0               |
-        |Identifiant de la these                   |  0.0                 | 0.0               |
-        |Year                                      |  0.0                 | 0.0               |
-        |Auteur                                    |  0.0                 | 0.0               |
-        |Discipline                                |  0.0                 | 0.0               |
-        |Etablissement  soutenance                 |  0.0                 | 0.0               | 
-        |Identifiant directeur                     |  0.0                 | 0.0               |
-        |Directeur de these (nom prenom)           |  0.0                 | 0.0               |
-        |Directeur de these                        |  0.0                 | 0.0               |
-        |Titre                                     |  0.0                 | 0.0               |
-        |Statut                                    |  0.0                 | 0.0               |
-         {:data-align="center"}
-         
-         We started our process by inspecting the missing values in our dataset.
-         First, we made Table 01 that contains every variable in the dataset with its missing values percentage,
-         and then we made a sorted matrix and heatmap to visualize the missing data in our variables. 
-
-        ***
-
-        ### Paragraphs
-
-        #### Paragraph
-
-        **William Shakespeare**, Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
-
-        #### Texts
-
-        Quoted text `Hello world`
-
-        Bold text **Hello world**
-
-        Italic text _Hello world_
-
-        kbd text <kbd>Hello world</kbd>
-
-        #### Blockquote
-
-        > **William Shakespeare**, Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
-
-        ### Link
-
-        This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme), a simple theme built for [Jekyll](https://jekyllrb.com/).
-
-        ### Picture
-
-        ![such a lovely place](:projects-heading.jpg)
-
-        ### Picture (centered)
-
-        ![such a lovely place](:project1_thumb.jpg){:data-align="center"}
-
-        ### Lists
-
-        - Apple
-        - Banana
-        - Orange
-
-        1. Fruits
-            1. Apples
-                - Granny Smith
-                - Mutsu
-            1. Bananas
-                - Cavendish
-                - Red
-        1. Vegetables
-
-        ***
-
-        ### Tables
-
-        #### Small Table (centered)
-
-        | Fruits(not aligned) | Alignment (centered) | num (right align) |
-        | ------------------- | :------------------: | ----------------: |
-        | Apple               |       centered       |              9999 |
-        | Banana              |  centered long text  |               999 |
-        | Orange              |       centered       |                99 |
-        | Lemon               |       centered       |                 9 |
-        {:data-align="center"}
-
-        #### Wide Table (centered)
-
-        scroll enabled when page is narrow
-
-        | Fruits | num (left align) | num (right align) | num  | num  | num  |
-        | ------ | :--------------- | ----------------: | ---- | ---- | ---- |
-        | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 |
-        | Banana | 111              |               111 | 222  | 333  | 444  |
-        | Orange | 11               |                11 | 22   | 33   | 44   |
-        | Lemon  | 1                |                 1 | 2    | 3    | 4    |
-        {:data-align="center"}
-
-        #### Wider Table
-
-        scroll enabled when page is narrow
-
-        | Fruits | num (left align) | num (right align) | num  | num  | num  | num  | num  | num  |
-        | ------ | :--------------- | ----------------: | ---- | ---- | ---- | ---- | ---- | ---- |
-        | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 | 5555 | 6666 | 7777 |
-        | Banana | 111              |               111 | 222  | 333  | 444  | 555  | 666  | 777  |
-        | Orange | 11               |                11 | 22   | 33   | 44   | 55   | 66   | 77   |
-        | Lemon  | 1                |                 1 | 2    | 3    | 4    | 5    | 6    | 7    |
-
-        ### Code
-
-        #### Quote
-
-        ```python
-        for i in range(5, 10):
-          print(i)
-        ```
-
-    # picture
+    
     - type: id_projet
       project_name: "Visualization des données"
       project_excerpt: "Visualization des données avec python"
@@ -204,32 +50,26 @@ page_data:
       date: "2021-04-23"
       post: |
         # Title
-        This is project content.
+        La visualisation des données est un aspect crucial de l'analyse des données car elle permet de rendre les résultats de l'analyse plus compréhensibles
+        et plus, accessibles pour un public non technique.
+        Dans ce projet, nous nous concentrons sur la production de figures de qualité irréprochable pour mettre en évidence les tendances
+        et les insights cachés dans les données
 
         ![Image](:project2_thumb.jpg)
 
-    # quote
+   
     - type: id_projet
       project_name: "Projet statistiques"
       project_excerpt: "Statistiques avec python"
       #img: ":project1_thumb.jpg"
       #img_title: "img title3"
       date: "2021-05-27"
-      post: |
-        Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
+      post: | 
+        Dans ce projet, nous nous concentrons sur divers aspects du modèle linéaire,
+        tels que la régression linéaire simple, le test de Student et l'ANOVA, ainsi que sur la régression logistique.
+        Nous allons par exemple décrire les résultats d'une table d'ANOVA ou d'odd-ratios.
+        Le jeu de données utilisé dans ce projet porte sur des analyses d'apprentissage issues de différentes itérations d'un MOOC (le MOOC Effectuation, appelé MOOC1).
+        Le focus est sur l'engagement des apprenants, notamment sur la visualisation de vidéos et la réalisation de quiz.
     - type: id_projet
       project_name: "Réduction de dimensionnalité"
       project_excerpt: "Apprentissage non supervisé avec R"
